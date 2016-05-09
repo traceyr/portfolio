@@ -1,12 +1,45 @@
-body {
-  margin: 0;
+/*styling css here*/
+.site-header {
+  display: inline;
+}
+
+.header-title{
+  padding: .2em 1em;
+}
+
+.site-header li {
+  display: inline;
+  padding: 0.2em;
+}
+
+.icon-rocket{
+  float: right;
+  font-size: 2em;
+  margin-left: 0.5em;
+  margin-top: 0;
+}
+
+.site-header-nav ul {
+  display: none;
   padding: 0;
+  list-style: none;
+  clear: both;
 }
 
-a {
-  color: #7C898B;
+.site-header-nav:hover ul {
+  display: block;
 }
 
-a:hover {
-  color: #4C443C;
+@media only screen and (min-width: 768px) {
+  .icon-rocket {
+  display:none;
+  }
+  .site-header-nav ul {
+    display: block;
+  }
+  .site-header-nav li {
+    display: inline;
+    border-bottom: none;
+    padding-right: 2em;
+  }
 }

@@ -1,10 +1,6 @@
-/*styling css here*/
-/*.site-header {
-  display: inline;
-}*/
-
 .site-header{
-  position: relative;
+  background-color: #4C443C;
+  color: white;
 }
 
 .header-title{
@@ -17,22 +13,14 @@
 }
 
 .icon-rocket{
-  /*text-align: left;*/
-  position: absolute;
-  top: 0;
-  right: 0;
   font-size: 2em;
   margin: 0.5em;
-  color: blue;
-  /*margin-left: 0.5em;
-  margin-top: 0;*/
+  color: white;
 }
 
 .site-header-nav ul {
   display: none;
-  padding: 0;
   list-style: none;
-  clear: both;
 }
 
 .site-header-nav:hover ul {
@@ -40,9 +28,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+
   .icon-rocket {
   display:none;
   }
+
   .site-header-nav ul {
     display: block;
   }
@@ -52,26 +42,13 @@
     padding-right: 2em;
   }
 
-  /*#projects {
-    margin-left: 0.5em;
-  }*/
-
   section{
     margin-left: 0.5em;
   }
-  .left-column {
-    float: left;
-    width: 49%;
-  }
 
-  .right-column {
-    float: right;
-    width: 49%;
-  }
-
-  #outside-interests {
-    clear: both;
-  }
+.site-header-nav ul{
+  margin-left: 0.1em;
+}
 
 
 }

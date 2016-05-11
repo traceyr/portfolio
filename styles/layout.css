@@ -19,9 +19,14 @@ img {
 
 @media only screen and (min-width: 768px) {
 
-  /*#outside-interests {
+  article {
+    width: 100%;
+    text-align: center;
+  }
+
+  #outside-interests {
     clear: both;
-  }*/
+  }
 
 
 }

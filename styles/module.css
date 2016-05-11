@@ -1,6 +1,6 @@
-/*styling css here*/
-.site-header {
-  display: inline;
+.site-header{
+  background-color: #4C443C;
+  color: white;
 }
 
 .header-title{
@@ -13,17 +13,14 @@
 }
 
 .icon-rocket{
-  float: right;
   font-size: 2em;
-  margin-left: 0.5em;
-  margin-top: 0;
+  margin: 0.5em;
+  color: white;
 }
 
 .site-header-nav ul {
   display: none;
-  padding: 0;
   list-style: none;
-  clear: both;
 }
 
 .site-header-nav:hover ul {
@@ -31,9 +28,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+
   .icon-rocket {
   display:none;
   }
+
   .site-header-nav ul {
     display: block;
   }
@@ -42,4 +41,14 @@
     border-bottom: none;
     padding-right: 2em;
   }
+
+  section{
+    margin-left: 0.5em;
+  }
+
+.site-header-nav ul{
+  margin-left: 0.1em;
+}
+
+
 }

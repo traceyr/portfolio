@@ -1,0 +1,27 @@
+.site-header{
+  position: relative;
+}
+
+.icon-rocket{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.site-header-nav ul {
+  clear: both;
+}
+
+img {
+  max-width: 100px;
+  max-height: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /*#outside-interests {
+    clear: both;
+  }*/
+
+
+}

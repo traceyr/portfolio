@@ -1,0 +1,20 @@
+/*body {
+  margin: 0;
+  padding: 0;
+}*/
+
+a {
+  color: #7C898B;
+}
+
+a:hover {
+  color: #4C443C;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}

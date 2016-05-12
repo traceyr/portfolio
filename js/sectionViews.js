@@ -36,7 +36,10 @@ sectionObj.handleMainNav = function() {
     var $selection = $(this).data('content');
     $('.tab-content').hide();
     $('.tab-content').each(function(){
-      if($(this).attr('id') === $selection){
+      if($selection === 'home'){
+        $('.tab-content').show();
+      }
+      else if($(this).attr('id') === $selection){
         $(this).fadeIn('fast');
       }
     });

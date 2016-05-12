@@ -36,6 +36,10 @@ a {
   text-decoration: none;
 }
 
+h4 a {
+  color: #020122;
+}
+
 @media only screen and (min-width: 768px) {
   main {
     margin-right: 15%;

@@ -1,6 +1,6 @@
 body{
   background-color: #F9F8F8;
-  color: #4C443C;
+  color: #020122;
 }
 
 h1 {
@@ -17,14 +17,15 @@ h6 {
 header {
   height: 300px;
   background-image: url('../images/minerva.jpg');
+  color: #F9F8F8;
 }
 
 a {
-  color: #7C898B;
+  color: #F9F8F8;
 }
 
 a:hover {
-  color: white;
+  color: #D8E4FF;
 }
 
 li {
@@ -33,4 +34,16 @@ li {
 
 a {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    margin-right: 15%;
+    margin-left: 15%;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center
+  }
 }

@@ -19,19 +19,8 @@ img {
 
 @media only screen and (min-width: 768px) {
 
-  main {
-    margin-right: 15%;
-    margin-left: 15%;
-    text-align: center;
-  }
-
-  h2 {
-    text-align: center
-  }
-
   #outside-interests {
     clear: both;
   }
-
 
 }

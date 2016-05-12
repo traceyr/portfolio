@@ -3,8 +3,9 @@ var sectionObj = {};
 sectionObj.populateFilter = function(){
   $('article').each(function(){
     if(!$(this).hasClass('template')) {
-      var val = $(this).find('h4 a').text();
+      var val = $(this).find('h4').text();
       var options = '<option value="' + val + '">' + val + '</option>';
+      console.log(val);
       $('#project-filter').append(options);
     }
   });

@@ -1,21 +1,21 @@
 .header-title{
-  padding: .2em 1em;
-}
-
-.site-header li {
-  display: inline;
-  padding: 0.2em;
+  margin-bottom: 0;
+  width: 90%;
 }
 
 .icon-rocket{
   font-size: 2em;
   margin: 0.5em;
   color: white;
+  margin-bottom: 0;
 }
 
 .site-header-nav ul {
   display: none;
   list-style: none;
+  float: right;
+  text-align: right;
+  margin-top: 0;
 }
 
 .site-header-nav:hover ul {
@@ -45,5 +45,12 @@
     margin-left: 0.1em;
   }
 
+  .site-header li {
+    display: inline;
+    padding: 0.2em;
+  }
 
+  .header-title{
+    padding: .2em 1em;
+  }
 }

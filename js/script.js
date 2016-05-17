@@ -1,4 +1,4 @@
-var projects = [];
+Projects.all = [];
 
 function Projects(o) {
   this.img = o.img;
@@ -26,10 +26,27 @@ Projects.prototype.toHtml = function() {
 
 };
 
-myProjectsArry.forEach(function(el){
-  projects.push(new Projects(el));
-});
+Projects.loadAll = function(dataIn){
+  dataIn.forEach(function(el){
+    Projects.all.push(new Projects(el));
+  });
+};
 
-projects.forEach(function(f){
-  $('#projects').append(f.toHtml());
-});
+Projects.fetchAll = function() {
+  if (localStorage.myData) {
+    console.log('There is local storage.');
+    Projects.loadAll(JSON.parse(localStorage.myData));
+    sectionObj.addToIndex();
+  } else {
+    $.getJSON('/data/myData.json', function(data) {
+      Projects.loadAll(data);
+      console.log('no local storage');
+      localStorage.myData = JSON.stringify(data);
+      sectionObj.addToIndex();
+    });
+  }
+};
+
+// projects.forEach(function(f){
+//   $('#projects').append(f.toHtml());
+// });

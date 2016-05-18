@@ -1,70 +1,52 @@
 
-  Projects.all = [];
+Projects.all = [];
 
-  function Projects(o) {
-    this.img = o.img;
-    this.ttle = o.ttle;
-    this.projectUrl = o.projectUrl;
-    // this.pubDate = o.pubDate;
-    this.aboutProj = o.aboutProj;
-  }
+function Projects(o) {
+  this.img = o.img;
+  this.ttle = o.ttle;
+  this.projectUrl = o.projectUrl;
+  // this.pubDate = o.pubDate;
+  this.aboutProj = o.aboutProj;
+}
 
-  Projects.prototype.toHtml = function() {
-    // var $newProject = $('article.template').clone();
-    //
-    // $newProject.find('img').attr('src', this.img);
-    // $newProject.find('a').attr('href', this.projectUrl);
-    // $newProject.find('a').text(this.ttle);
-    // $newProject.find('p').attr('data-aboutProj', this.aboutProj).text(this.aboutProj);
-    //
-    // $newProject.removeClass('template');
-    // $newProject.attr('data-ttle', this.ttle);
-    //
-    // return $newProject;
-    var $source = $('#portfolio-template').html();
-    var template = Handlebars.compile($source);
-    return template(this);
+Projects.prototype.toHtml = function() {
+  var $source = $('#portfolio-template').html();
+  var template = Handlebars.compile($source);
+  return template(this);
 
-  };
+};
 
-  Projects.loadAll = function(dataIn){
-    Projects.all = dataIn.map(function(el){
-      return new Projects(el);
-    });
-    // dataIn.forEach(function(el){
-    //   Projects.all.push(new Projects(el));
-    // });
-  };
+Projects.loadAll = function(dataIn){
+  Projects.all = dataIn.map(function(el){
+    return new Projects(el);
+  });
+};
 
-  Projects.fetchAll = function() {
-    if (localStorage.myData) {
-      console.log('There is local storage.');
-      Projects.loadAll(JSON.parse(localStorage.myData));
+(function() {
+  if (localStorage.myData) {
+    console.log('There is local storage.');
+    Projects.loadAll(JSON.parse(localStorage.myData));
+    sectionObj.addToIndex();
+  } else {
+    $.getJSON('/data/myData.json', function(data) {
+      Projects.loadAll(data);
+      console.log('no local storage');
+      localStorage.myData = JSON.stringify(data);
       sectionObj.addToIndex();
-    } else {
-      $.getJSON('/data/myData.json', function(data) {
-        Projects.loadAll(data);
-        console.log('no local storage');
-        localStorage.myData = JSON.stringify(data);
-        sectionObj.addToIndex();
-      });
-    }
-  };
-  // projects.forEach(function(f){
-  //   $('#projects').append(f.toHtml());
-  // });
-
-  Projects.numWords = function(){
-    console.log('it is being called');
-    console.log(Projects.all);
-    return Projects.all.map(function(curProj){
-      console.log(curProj);
-      return curProj.aboutProj.split(' ').length;
-    }).reduce(function(f, g){
-      return f + g;
     });
-  };
+  }
+})();
 
-  $('#numWords').text(Projects.numWords);
+Projects.numWords = function(){
+  console.log('it is being called');
+  console.log(Projects.all);
+  return Projects.all.map(function(curProj){
+    console.log(curProj);
+    return curProj.aboutProj.split(' ').length;
+  }).reduce(function(f, g){
+    return f + g;
+  });
+};
+//for future, maybe only have footer appear when the user is on the projects page. and have the word count display for only the project or projects showing.
 
-console.log(Projects.numWords());
+$('#numWords').text(Projects.numWords);

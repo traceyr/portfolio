@@ -1,13 +1,10 @@
+function Projects(o) {
+  Object.keys(o).forEach(function(prop, index, keys){
+    this[prop] = o[prop];
+  }, this);
+}
 
 Projects.all = [];
-
-function Projects(o) {
-  this.img = o.img;
-  this.ttle = o.ttle;
-  this.projectUrl = o.projectUrl;
-  // this.pubDate = o.pubDate;
-  this.aboutProj = o.aboutProj;
-}
 
 Projects.prototype.toHtml = function() {
   var $source = $('#portfolio-template').html();
@@ -47,6 +44,5 @@ Projects.numWords = function(){
     return f + g;
   });
 };
-//for future, maybe only have footer appear when the user is on the projects page. and have the word count display for only the project or projects showing.
 
 $('#numWords').text(Projects.numWords);

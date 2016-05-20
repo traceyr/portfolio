@@ -49,16 +49,10 @@ sectionObj.handleMainNav = function() {
 };
 
 sectionObj.addToIndex = function() {
-  Projects.all.forEach(function(i){
+  Projects.all.map(function(i){
     $('#projects').append(i.toHtml($('#portfolio-template')));
   });
   sectionObj.populateFilter();
   sectionObj.handleProjectFilter();
   sectionObj.handleMainNav();
 };
-
-// $(document).ready(function(){
-//   sectionObj.populateFilter();
-//   sectionObj.handleProjectFilter();
-//   sectionObj.handleMainNav();
-// });

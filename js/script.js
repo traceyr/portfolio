@@ -1,3 +1,4 @@
+
 function Projects(o) {
   Object.keys(o).forEach(function(prop, index, keys){
     this[prop] = o[prop];
@@ -19,7 +20,7 @@ Projects.loadAll = function(dataIn){
   });
 };
 
-(function() {
+ (function() {
   if (localStorage.myData) {
     console.log('There is local storage.');
     Projects.loadAll(JSON.parse(localStorage.myData));

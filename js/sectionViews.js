@@ -52,16 +52,7 @@ sectionObj.addToIndex = function() {
   Projects.all.map(function(i){
     $('#projects').append(i.toHtml($('#portfolio-template')));
   });
-  // Projects.all.forEach(function(i){
-  //   $('#projects').append(i.toHtml($('#portfolio-template')));
-  // });
   sectionObj.populateFilter();
   sectionObj.handleProjectFilter();
   sectionObj.handleMainNav();
 };
-
-// $(document).ready(function(){
-//   sectionObj.populateFilter();
-//   sectionObj.handleProjectFilter();
-//   sectionObj.handleMainNav();
-// });

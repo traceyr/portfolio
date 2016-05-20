@@ -35,10 +35,7 @@ Projects.loadAll = function(dataIn){
 })();
 
 Projects.numWords = function(){
-  console.log('it is being called');
-  console.log(Projects.all);
   return Projects.all.map(function(curProj){
-    console.log(curProj);
     return curProj.aboutProj.split(' ').length;
   }).reduce(function(f, g){
     return f + g;

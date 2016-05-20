@@ -1,6 +1,8 @@
 .header-title{
   margin-bottom: 0;
   width: 90%;
+  padding: .2em 1em;
+
 }
 
 .icon-rocket{
@@ -38,9 +40,9 @@
     padding-right: 2em;
   }
 
-  section{
+  /*section{
     margin-left: 0.5em;
-  }
+  }*/
 
   .site-header-nav ul{
     margin-left: 0.1em;

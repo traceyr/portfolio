@@ -7,6 +7,7 @@ h1 {
   font-size: 4em;
   font-family: 'Rancho', cursive;
   margin-bottom: 0;
+  display: inline;
 }
 
 h6 {
@@ -50,4 +51,9 @@ h4 a {
   h2 {
     text-align: center
   }
+}
+
+.header-title{
+  width: 90%;
+
 }

@@ -2,7 +2,9 @@
   var homeController = {};
 
   homeController.index = function(){
-    Projects.start(sectionObj.addToIndex());
+    if(Projects.all.length == 0){
+      Projects.start();
+    }
     $('#projects').show();
     $('#intro').show();
     $('#outside-interests').show();

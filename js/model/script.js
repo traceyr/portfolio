@@ -8,8 +8,8 @@
 
   Projects.all = [];
 
-  Projects.prototype.toHtml = function(template) {
-    var $source = $(template).html();
+  Projects.prototype.toHtml = function(templates) {
+    var $source = $(templates).html();
     var template = Handlebars.compile($source);
     return template(this);
 
@@ -25,13 +25,13 @@
     if (localStorage.myData) {
       console.log('There is local storage.');
       Projects.loadAll(JSON.parse(localStorage.myData));
-      // sectionObj.addToIndex();
+      sectionObj.addToIndex();
     } else {
       $.getJSON('/data/myData.json', function(data) {
         Projects.loadAll(data);
         console.log('no local storage');
         localStorage.myData = JSON.stringify(data);
-        // sectionObj.addToIndex();
+        sectionObj.addToIndex();
       });
     }
     $('#numWords').text(Projects.numWords);

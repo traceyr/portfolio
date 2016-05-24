@@ -1,11 +1,12 @@
 (function(module){
-  projectController = {};
+  var projectController = {};
 
-  homeController.index = function(){
-    Projects.start(sectionObj.addToIndex);
+  projectController.index = function(){
+    Projects.start(sectionObj.addToIndex());
     $('#projects').show();
-    $('.template').hide();
-    $('main').show();
+    $('#intro').hide();
+    $('#outside-interests').hide();
+    $('#about').hide();
   };
-
-})
+  module.projectController = projectController;
+})(window);

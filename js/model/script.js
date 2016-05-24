@@ -25,11 +25,13 @@
     if (localStorage.myData) {
       console.log('There is local storage.');
       Projects.loadAll(JSON.parse(localStorage.myData));
+      // sectionObj.addToIndex();
     } else {
       $.getJSON('/data/myData.json', function(data) {
         Projects.loadAll(data);
         console.log('no local storage');
         localStorage.myData = JSON.stringify(data);
+        // sectionObj.addToIndex();
       });
     }
     $('#numWords').text(Projects.numWords);

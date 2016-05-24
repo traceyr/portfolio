@@ -30,23 +30,23 @@ sectionObj.handleProjectFilter = function(){
   });
 };
 
-sectionObj.handleMainNav = function() {
-  $('.site-header-nav').on('click', '.tab', function(){
-    $('article').show();
-    $('.template').hide();
-    var $selection = $(this).data('content');
-    $('.tab-content').hide();
-    $('.tab-content').each(function(){
-      if($selection === 'home'){
-        $('.tab-content').show();
-      }
-      else if($(this).attr('id') === $selection){
-        $(this).fadeIn('fast');
-      }
-    });
-  });
-  $('.site-header-nava .tab:first').click();
-};
+// sectionObj.handleMainNav = function() {
+//   $('.site-header-nav').on('click', '.tab', function(){
+//     $('article').show();
+//     $('.template').hide();
+//     var $selection = $(this).data('content');
+//     $('.tab-content').hide();
+//     $('.tab-content').each(function(){
+//       if($selection === 'home'){
+//         $('.tab-content').show();
+//       }
+//       else if($(this).attr('id') === $selection){
+//         $(this).fadeIn('fast');
+//       }
+//     });
+//   });
+//   $('.site-header-nava .tab:first').click();
+// };
 
 sectionObj.addToIndex = function() {
   Projects.all.map(function(i){

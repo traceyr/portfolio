@@ -8,8 +8,8 @@
 
   Projects.all = [];
 
-  Projects.prototype.toHtml = function() {
-    var $source = $('#portfolio-template').html();
+  Projects.prototype.toHtml = function(template) {
+    var $source = $(template).html();
     var template = Handlebars.compile($source);
     return template(this);
 

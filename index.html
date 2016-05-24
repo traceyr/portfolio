@@ -34,19 +34,19 @@
       <div class="icon-rocket"></div>
       <ul class>
         <li class="tab" data-content="home">
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li class="tab" data-content="intro">
-          <a href="#">Intro</a>
+          <a href="/intro">Intro</a>
         </li>
         <li class="tab" data-content="about">
-          <a href="#">About</a>
+          <a href="/about">About</a>
         </li>
         <li class="tab" data-content="projects">
-            <a href="#">Projects</a>
+            <a href="/projects">Projects</a>
         </li>
         <li class="tab" data-content="outside-interests">
-            <a href="#">Other Interests</a>
+            <a href="/other">Other Interests</a>
         </li>
         <li class="tab" data-content="github">
             <a href="https://github.com/traceyr" target="_blank" class="icon-github">GitHub</a>
@@ -109,10 +109,15 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
-  <script src="js/myProjects.js" type="text/javascript"></script>
-  <script src="js/sectionViews.js" type="text/javascript"></script>
-  <script src="js/script.js" type="text/javascript"></script>
-  <script>Projects.start();</script>
+  <script src="vendor/scripts/page.js"></script>
+  <script src="js/view/sectionViews.js" type="text/javascript"></script>
+  <script src="js/model/script.js" type="text/javascript"></script>
+  <script src="js/controller/projectController.js"></script>
+  <script src="js/controller/otherController.js"></script>
+  <script src="js/controller/introController.js"></script>
+  <script src="js/controller/homeController.js"></script>
+  <script src="js/controller/aboutController.js"></script>
+  <script src="js/controller/routes.js"></script>
 
 </body>
 </html>

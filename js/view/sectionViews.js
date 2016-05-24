@@ -54,5 +54,5 @@ sectionObj.addToIndex = function() {
   });
   sectionObj.populateFilter();
   sectionObj.handleProjectFilter();
-  sectionObj.handleMainNav();
+  // sectionObj.handleMainNav();
 };

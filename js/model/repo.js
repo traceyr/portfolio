@@ -9,15 +9,15 @@
       headers: {'Authorization': 'token ' + gitRepo.gitToken},
       success: function(data, message, xhr){
         console.log(data);
-        repos.all = data;
+        randomData.all = data;
         callback();
       }
     });
   };
 
   randomData.with = function(attr) {
-    repos.all.filter(function(data){
-      return repo[data];
+    return randomData.all.filter(function(data){
+      return data[attr];
     });
   };
   module.randomData = randomData;

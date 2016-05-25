@@ -2,10 +2,8 @@
   var otherController = {};
 
   otherController.index = function() {
-    $('#projects').hide();
-    $('#intro').hide();
-    $('#outside-interests').show();
-    $('#about').hide();
+    $('#outside-interests').show().siblings().hide();
+    randomData.requestData(randomDataView.index);
   };
   module.otherController = otherController;
 })(window);

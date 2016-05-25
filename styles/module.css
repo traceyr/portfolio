@@ -28,6 +28,10 @@
   display: block;
 }
 
+#outside-interests li a{
+  color: black;
+}
+
 @media only screen and (min-width: 768px) {
 
   .icon-rocket {

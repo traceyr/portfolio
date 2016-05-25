@@ -5,10 +5,8 @@
     if(Projects.all.length == 0){
       Projects.start();
     }
-    $('#projects').show();
-    $('#intro').show();
-    $('#outside-interests').show();
-    $('#about').show();
+    $('section').show().siblings.show();
+    $('footer').hide();
   };
 
   module.homeController = homeController;

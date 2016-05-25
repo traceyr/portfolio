@@ -1,4 +1,4 @@
 var gitRepo = {
   gitUser: 'traceyr',
-  gitToken: '1f898457d3a760bfabbaf6d05f4d87d490f62480'
+  gitToken: 'f38d1ef2f1deef4ec4d5e93ef5f85d7712f39972'
 };

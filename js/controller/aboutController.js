@@ -2,10 +2,8 @@
   var aboutController = {};
 
   aboutController.index = function() {
-    $('#projects').hide();
-    $('#intro').hide();
-    $('#outside-interests').hide();
-    $('#about').show();
+    $('#about').show().siblings().hide();
+    $('footer').hide();
   };
   module.aboutController = aboutController;
 })(window);

@@ -5,7 +5,7 @@
     if(Projects.all.length == 0){
       Projects.start();
     }
-    $('section').show().siblings.show();
+    $('section').show();
     $('footer').hide();
   };
 

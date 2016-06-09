@@ -4,9 +4,9 @@
 
   randomData.requestData = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/users/' + gitRepo.gitUser + '/repos' + '?per_page=10' + '&fork=false' + '&sort=updated',
+      url: 'https://api.github.com/users/traceyr/repos' + '?per_page=10' + '&fork=false' + '&sort=updated',
       type: 'GET',
-      headers: {'Authorization': 'token ' + gitRepo.gitToken},
+      headers: {'Authorization': 'token ' + GITHUB_TOKEN},
       success: function(data, message, xhr){
         console.log(data);
         randomData.all = data;
